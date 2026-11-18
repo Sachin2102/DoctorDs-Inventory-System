@@ -1,0 +1,18 @@
+# Secrets: never publish the database password
+local_settings.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Downloaded tax-rate files (re-created by the app)
+tax_cache/
+
+# Editors and OS files
+.idea/
+.vscode/
+~$*
+Thumbs.db
+.DS_Store

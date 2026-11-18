@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventory & Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f2ee; --ink:#221e1b; --muted:#7d746b; --muted2:#8f867c; --label:#5b534b;
+    --accent:#7a1f1f; --accent-dark:#5f1818; --line:#e6e0d8; --line2:#f0ebe4;
+    --panel:#fff; --panel2:#f7f4f0; --head:#faf7f3;
+    --green-bg:#e9f4ec; --green:#1d6b35; --red-bg:#fbeeee; --red:#b42318;
+    --amber-bg:#fbf1e3; --amber:#8a5a00; --blue-bg:#eef2fb; --blue:#2a4f9a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  button{font-family:'IBM Plex Sans',sans-serif}
+  input,select{font-family:'IBM Plex Sans',sans-serif;color:var(--ink)}
+  input:focus,select:focus{outline:none;border-color:var(--ink)!important}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th{text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:var(--muted);background:var(--head);white-space:nowrap}
+  td{padding:11px 14px;border-top:1px solid var(--line2)}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .num{text-align:right;font-variant-numeric:tabular-nums}
+  .tw{overflow-x:auto;border:1px solid #ece6dd;border-radius:10px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .in{width:100%;padding:10px 12px;border:1px solid #d9d2c9;border-radius:8px;font-size:15px;background:#fff}
+  .fld{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--label)}
+  /* page width: grows with the window (no wide empty margins on big screens), side padding scales too */
+  .shell{max-width:1760px;margin:0 auto;padding-left:clamp(16px,3vw,48px);padding-right:clamp(16px,3vw,48px)}
+  @media (max-width:560px){ main.shell{padding-top:20px!important;padding-bottom:48px!important} header .hwrap{padding-top:12px!important;padding-bottom:12px!important} }
+  .dl{display:inline-flex;align-items:center;gap:6px;border:1px solid #d9d2c9;border-radius:7px;padding:6px 11px;font:500 12px 'IBM Plex Sans',sans-serif;color:#5b534b;background:#fff;text-decoration:none;white-space:nowrap}
+  .dl:hover{border-color:#7a1f1f;color:#7a1f1f}
+  /* Settings tab: compact inputs in tables; a row's Save turns maroon once something is changed */
+  .si{width:100%;min-width:62px;padding:7px 9px;border:1px solid #d9d2c9;border-radius:6px;font-size:14px;background:#fff}
+  .si.r{text-align:right;font-variant-numeric:tabular-nums}
+  td.st{padding:7px 5px;vertical-align:middle}
+  th.st{padding:9px 5px}
+  .sv{border:1px solid #d9d2c9;border-radius:7px;padding:7px 14px;font:600 13px 'IBM Plex Sans',sans-serif;background:#fff;color:#5b534b;cursor:pointer;white-space:nowrap}
+  .sv.dirty{background:#7a1f1f;border-color:#7a1f1f;color:#fff}
+  .ck{width:18px;height:18px;accent-color:#7a1f1f;cursor:pointer}
+</style>
+</head>
+<body>
+  <div id="root" style="min-height:100vh">
+    <div style="max-width:900px;margin:80px auto;padding:0 20px;text-align:center;color:#7d746b">
+      Loading the console…
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
